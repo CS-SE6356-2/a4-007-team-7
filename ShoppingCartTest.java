@@ -22,7 +22,13 @@ class ShoppingCartTest {
 			sc.addItem(p1);
 			sc.addItem(p2);
 			// Total count of items added in the cart. -- Step 3
-			assertEquals(3, sc.getItemCount());			
+			assertEquals(3, sc.getItemCount());
+			// Sum of the total items in the cart. -- Step 4
+			assertEquals(p.getPrice() + p1.getPrice() + p2.getPrice(), sc.getBalance());
+
+			sc.removeItem(p2);
+			// Count should be decremented. -- Step 5
+			assertEquals(2, sc.getItemCount());			
 
 		} catch (Exception ex) {
 			fail(ex.getMessage());
