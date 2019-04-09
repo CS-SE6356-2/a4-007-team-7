@@ -28,7 +28,15 @@ class ShoppingCartTest {
 
 			sc.removeItem(p2);
 			// Count should be decremented. -- Step 5
-			assertEquals(2, sc.getItemCount());			
+			assertEquals(2, sc.getItemCount());
+			sc.removeItem(p);
+
+			sc.removeItem(p1);
+
+			// Count should be zero for the Empty cart. -- Step 2
+
+			assertEquals(0, sc.getItemCount());
+
 
 		} catch (Exception ex) {
 			fail(ex.getMessage());
