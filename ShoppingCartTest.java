@@ -30,12 +30,13 @@ class ShoppingCartTest {
 			// Count should be decremented. -- Step 5
 			assertEquals(2, sc.getItemCount());
 			sc.removeItem(p);
-
 			sc.removeItem(p1);
 
 			// Count should be zero for the Empty cart. -- Step 2
-
 			assertEquals(0, sc.getItemCount());
+         
+         // Exception has been raised and the fail method has been executed -- Step 6
+			sc.removeItem(p2);
 
 
 		} catch (Exception ex) {
