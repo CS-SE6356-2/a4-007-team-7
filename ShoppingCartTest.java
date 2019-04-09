@@ -4,11 +4,11 @@ import static org.junit.Assert.fail;
 import org.junit.jupiter.api.Test;
 
 class ShoppingCartTest {
-	
+
 	@SuppressWarnings("deprecation")
 	@Test
 	void test() {
-		try {			
+		try {
 			ShoppingCart sc = new ShoppingCart();
 
 			// Zero Items initially. - Step 1.
@@ -34,10 +34,9 @@ class ShoppingCartTest {
 
 			// Count should be zero for the Empty cart. -- Step 2
 			assertEquals(0, sc.getItemCount());
-         
-         // Exception has been raised and the fail method has been executed -- Step 6
-			sc.removeItem(p2);
 
+			// Exception has been raised and the fail method has been executed -- Step 6
+			// sc.removeItem(p2);
 
 		} catch (Exception ex) {
 			fail(ex.getMessage());

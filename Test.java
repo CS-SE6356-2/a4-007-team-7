@@ -19,10 +19,17 @@ public class Test {
 		sc.addItem(p2);
 		System.out.println(sc.getBalance());
 		System.out.println(sc.getItemCount());
-		//sc.removeItem(p2);
+		try {
+			//sc.removeItem(p2);
+			//sc.removeItem(p3);
+		}
+		catch(Exception ex) {
+			
+		}
+		
 		System.out.println(sc.getBalance());
 		System.out.println(sc.getItemCount());
-		//sc.removeItem(p3);
+
 		
 	}
 
